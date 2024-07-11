@@ -1,32 +1,50 @@
 import { useState } from "react";
 import styled from "styled-components";
 
+
 const Allmenu = styled.button`
-  &:before{
-    content:"햄버거 아이콘 유니코드"
-  }
-`
-const CLosemenu = styled.button`
-  &:before{
-    content:"닫기 부트스트랩 유니코드"
-  }
+      display: inline-block;
+      font-family: bootstrap-icons !important;
+      font-style: normal;
+      font-weight: 400 !important;
+      font-variant: normal;
+      text-transform: none;
+      &:before{
+        content : '\\F479';
+      }
 `
 
+const Closemenu = styled.button`
+      display: inline-block;
+      font-family: bootstrap-icons !important;
+      font-style: normal;
+      font-weight: 400 !important;
+      font-variant: normal;
+      text-transform: none;
+      &:before{
+        content : '\\F62A';
+
+      }
+`
 
 function App() {
   const [allmenu, setAllmenu] = useState(false);
+
   return (
     <div className="App">
-      <button onClick={()=>{
+      
+      <div onClick={()=>{
         setAllmenu(!allmenu);
       }}>
         {
-          allmenu ?  <CLosemenu /> : <Allmenu />
-        }
-      </button>
+          allmenu ? 
+          <Closemenu ></Closemenu> : 
+          <Allmenu ></Allmenu>
+        }        
+      </div>
+    
     </div>
   );
 }
 
-export default App;
-
+export default App
