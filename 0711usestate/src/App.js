@@ -1,39 +1,32 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 const Allmenu = styled.button`
-      display: inline-block;
-      font-family: bootstrap-icons !important;
-      font-style: normal;
-      font-weight: 400 !important;
-      font-variant: normal;
-      text-transform: none;
-      &.close:before{
-        content : '\\F62A';
-      }
-      &:before{
-        content : '\\F479';
-      }
+  &:before{
+    content:"햄버거 아이콘 유니코드"
+  }
+`
+const CLosemenu = styled.button`
+  &:before{
+    content:"닫기 부트스트랩 유니코드"
+  }
 `
 
+
 function App() {
-
-  useEffect(()=>{
-    // 랜더링 html이 생성완료된 시점
-    // window.onload와 같다
-    // 웹으로 제작한 자바스크립트 여기로
-    document.querySelector('#allMenu').addEventListener("click",function(){
-       this.classList.toggle('close')
-    })
-  }, [])
-
+  const [allmenu, setAllmenu] = useState(false);
   return (
-    <div className="App">      
-      <div >
-        <Allmenu className="close" id="allMenu"></Allmenu>        
-      </div>    
+    <div className="App">
+      <button onClick={()=>{
+        setAllmenu(!allmenu);
+      }}>
+        {
+          allmenu ?  <CLosemenu /> : <Allmenu />
+        }
+      </button>
     </div>
   );
 }
 
 export default App;
+
