@@ -1,0 +1,33 @@
+{
+    "gnb" :[
+        {
+            "atext" : "네이버",
+            "href" : "http://www.naver.com"
+        },
+        {
+            "atext" : "다음",
+            "href" : "http://www.daum.net"
+        },
+        {
+            "atext" : "구글",
+            "href" : "http://www.daum.net"
+        }
+    ],
+    "banner" : [
+        {
+            "atext" : "특가할인",
+            "btntext" : "더보기",
+            "cls" : "bg-dark text-white"
+        },
+        {
+            "atext" : "멤버쉽혜택",
+            "btntext" : "신청하기",
+            "cls" : "bg-wraning "
+        },
+        {
+            "atext" : "구독신청",
+            "btntext" : "신청하기",
+            "cls" : "bg-light "
+        }
+    ]
+}
