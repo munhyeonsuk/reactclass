@@ -15,7 +15,7 @@ function App() {
       }}> {count}증가해줘</button>
 
       <button onClick={()=>{
-        setCount(count -1);
+        setCount(count >0 ? count -1 : bgcolor.length -1);
       }}> {count}감소해줘</button>
     </div>
   );
