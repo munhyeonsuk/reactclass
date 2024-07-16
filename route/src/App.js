@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <div>
+        <a href="">로고</a>
         <Link to ='./about'>회사소개</Link>
         <Link to ='./board'>공지사항</Link>
       </div>
